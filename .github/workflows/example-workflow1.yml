@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: https://github.com/actions/checkout
+        uses: actions/checkout@main
 
       - name: Print Workflow Name
         run: |
