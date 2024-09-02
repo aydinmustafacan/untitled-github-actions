@@ -1,0 +1,23 @@
+name: Dummy Artifact Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Create a dummy file
+        run: echo "This is a dummy artifact file." > dummy-artifact.txt
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: dummy-artifact
+          path: dummy-artifact.txt

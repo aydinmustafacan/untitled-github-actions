@@ -1,9 +1,9 @@
-name: Example Workflow 1
+name: Workflow using custom docker action of mine
 
 on:
   push:
     branches:
-      - main
+      - main2
 
 jobs:
   example-job1:
