@@ -1,10 +1,15 @@
 name: Test Log and Comment Action
 
 on:
-  pull_request_target:
+  pull_request:
     branches:
       - main
-    types: [opened, edited, assigned, closed, reopened]
+    types: [opened, edited, assigned,unassigned, closed, reopened, synchronize]
+
+permissions:
+  issues: write
+  pull-requests: write
+  contents: read
 
 jobs:
   test-action:
