@@ -4,7 +4,10 @@ on:
   pull_request:
     branches:
       - main
-    types: [opened, edited, assigned, closed, reopened]
+    types: [opened]
+  push:
+    branches:
+      - generalUpdate1
 
 jobs:
   test-action:
