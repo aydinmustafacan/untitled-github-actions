@@ -1,4 +1,4 @@
-name: Deploy Workflow
+name: Example Workflow 1
 
 on:
   push:
@@ -6,11 +6,11 @@ on:
       - main
 
 jobs:
-  build:
+  example-job1:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: https://github.com/actions/checkout
 
       - name: Print Workflow Name
         run: |

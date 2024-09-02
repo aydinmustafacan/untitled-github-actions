@@ -1,5 +1,5 @@
 name: "Echo Action"
-description: "An action that echoes a message"
+description: "An action that echoes a message (this is the action metadata file)"
 
 inputs:
   message:
