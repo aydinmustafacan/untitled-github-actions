@@ -1,0 +1,22 @@
+name: Deploy Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Print Workflow Name
+        run: |
+          echo "This workflow's name is: $GITHUB_WORKFLOW"
+
+      - name: Run Echo Action
+        uses: ./.github/actions/my-docker-action  # Updated path to the action
+        with:
+          message: "Hello, World!"
