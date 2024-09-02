@@ -1,0 +1,2 @@
+- the metadata file must be named action.yml or action.yaml
+- 

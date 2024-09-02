@@ -1,0 +1,19 @@
+name: Test Log and Comment Action
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run custom action
+        uses: ./.github/actions/my-js-action
+        with:
+          message: 'Hello, this is a test comment from the custom action!'
+          github-token: ${{ secrets.GITHUB_TOKEN }}

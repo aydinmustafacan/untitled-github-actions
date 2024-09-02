@@ -1,0 +1,14 @@
+name: 'Log and Comment Action'
+description: 'Logs a message and comments on a pull request'
+author: 'Mustafa Can Aydin <mustafacanaydin@example.com>'
+inputs:
+  message:
+    description: 'The message to log and comment'
+    required: true
+  github-token:
+    description: 'GitHub token for commenting on a pull request'
+    required: false
+
+runs:
+  using: 'node20'
+  main: 'index.js'
